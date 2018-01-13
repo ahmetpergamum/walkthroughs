@@ -22,6 +22,24 @@ find ./inhere -size 1033c \! -executable
 cat ./inhere/maybehere07/.file2
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 bandit6>7
-find / 
+find / -size 33c -user bandit7 -group bandit6 2>/dev/null
+cat /var/lib/dpkg/info/bandit7.password
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+bandit7>8
+grep millionth data.txt
+cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+bandit8>9
+sort data.txt | uniq -u
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+bandit9>10
+strings data.txt | grep =
+truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+bandit10>11
+base64 -d data.txt
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+bandit11>12
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+bandit12>13
 
 
