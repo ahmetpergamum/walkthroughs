@@ -41,5 +41,31 @@ bandit11>12
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 bandit12>13
-
-
+mkdir /tmp/ao3488
+cp data.txt /tmp/ao3488/
+cd /tmp/ao3488
+man xxd
+xxd -r data.txt > data
+file data
+mv data data.gz
+gzip -d data.gz
+file data
+bzip2 -d data
+file data.out
+mv data.out data.gz
+gzip -d data.gz
+file data
+tar xvf data
+file data5.bin
+tar xvf data5.bin
+file data6.bin
+bzip2 -d data6.bin
+file data6.bin.out
+tar xvf data6.bin.out
+file data8.bin
+mv data8.bin data8.gz
+gunzip data8.gz
+file data8
+cat data8
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+bandit13>14
