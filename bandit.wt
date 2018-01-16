@@ -89,5 +89,12 @@ vi /tmp/ao3489/ssh_key_bandit17
 change the permissions of ssh key file
 Keys need to be only accessible by you
 chmod 600 /tmp/ao3489/ssh_key_bandit17
-sh localhost -i /tmp/ao3489/ssh_key_bandit17 -l bandit17
+ssh localhost -i /tmp/ao3489/ssh_key_bandit17 -l bandit17
 bandit17>18
+diff passwords.old passwords.new
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+bandit18>19
+scp -P 2220 bandit18@bandit.labs.overthewire.org:readme .
+cat readme
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+bandit19>bandit20
