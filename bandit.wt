@@ -72,4 +72,22 @@ bandit13>14
 ls
 ssh localhost -i sshkey.private -l bandit14
 bandit14>15
-
+cat /etc/bandit_pass/bandit14 | nc 127.0.0.1 30000
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+bandit15>16
+The -ign_eof keeps the connection open to read the response.
+cat /etc/bandit_pass/bandit15 | openssl s_client -connect 127.0.0.1:30001 -ign_eof
+cluFn7wTiGryunymYOu4RcffSxQluehd
+bandit16>17
+nmap -n -Pn -p 31000-32000 127.0.0.1
+nmap -n -Pn -sV -p 31046,31518,31691,31790,31960 127.0.0.1
+cat /etc/bandit_pass/bandit16 | openssl s_client -connect 127.0.0.1:31790 -ign_eof
+mkdir /tmp/ao3489
+cat /etc/bandit_pass/bandit16 | openssl s_client -connect 127.0.0.1:31790 -ign_eof > /tmp/ao3489/ssh_key_bandit17
+edit the file and remain the private key part
+vi /tmp/ao3489/ssh_key_bandit17
+change the permissions of ssh key file
+Keys need to be only accessible by you
+chmod 600 /tmp/ao3489/ssh_key_bandit17
+sh localhost -i /tmp/ao3489/ssh_key_bandit17 -l bandit17
+bandit17>18
