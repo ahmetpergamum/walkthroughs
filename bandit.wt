@@ -69,3 +69,7 @@ file data8
 cat data8
 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 bandit13>14
+ls
+ssh localhost -i sshkey.private -l bandit14
+bandit14>15
+
