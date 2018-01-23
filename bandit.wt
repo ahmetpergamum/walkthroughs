@@ -98,3 +98,34 @@ scp -P 2220 bandit18@bandit.labs.overthewire.org:readme .
 cat readme
 IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 bandit19>bandit20
+./bandit20-do
+./bandit20-do whoami
+./bandit20-do cat /etc/bandit_pass/bandit20
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+bandit20>21
+for docker issue do the port forwarding
+open 1234 on your pc and gorward it to port 22 at bandit localhost
+ssh -l bandit20 -p 2220 -L 1234:localhost:22 bandit.labs.overthewire.org
+after that open two connections from your localhost
+ssh localhost -p 1234 -l bandit20
+ssh localhost -p 1234 -l bandit20
+open nc listener in one of these sessions
+nc -l -p 3333
+start the suid program from another
+./suconnect 3333
+send the bandit20 pass from listening server (netcat) side
+and get back the bandit21 pass
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+bandit21>22
+examine the /etc/cron.d and see the
+cat /etc/cron.d/cronjob_bandit22
+script was "/usr/bin/cronjob_bandit22.sh" execute it to see the error message
+/usr/bin/cronjob_bandit22.sh
+/tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv: Permission denied
+ls -al /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+we have read permissions so open it and finish
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+bandit22>23
+
+
