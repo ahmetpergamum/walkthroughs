@@ -244,3 +244,31 @@ wait a minute and read pass24
 $ cat pass24
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 ```
+### bandit24>25
+there is a pincode checker at port 30002 check this program first
+```
+$ echo UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ0000 | nc localhost 30002
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+Fail! You did not supply enough data. Try again.
+Exiting.
+```
+I did not inser the pincode properly because there is no space between bandit24 password and pincode
+I checked with the proper data
+```
+$ echo UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 0000 | nc localhost 30002
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+Wrong! Please enter the correct pincode. Try again.
+Exiting.
+```
+There is a failure message that contains `Wrong!` string
+I can write a script that checks all combinations of pincode
+Firstly create the working directory
+```
+$ mkdir /tmp/ao3424
+$ cd /tmp/ao3424
+
+```
+script content;
+```
+
+```
