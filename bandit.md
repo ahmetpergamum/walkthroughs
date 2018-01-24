@@ -1,8 +1,8 @@
 ### bandit0
 ```
 ssh bandit.labs.overthewire.org -p 2220 -l bandit0
-```
 bandit0
+```
 ### bandit0>1
 ```
 cat readme
