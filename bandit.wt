@@ -119,7 +119,9 @@ gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
 bandit21>22
 examine the /etc/cron.d and see the
 cat /etc/cron.d/cronjob_bandit22
-script was "/usr/bin/cronjob_bandit22.sh" execute it to see the error message
+script was "/usr/bin/cronjob_bandit22.sh"
+ls -al /usr/bin/cronjob_bandit22.sh
+bandit21 can execute so execute it to see the error message
 /usr/bin/cronjob_bandit22.sh
 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv: Permission denied
 ls -al /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
@@ -127,5 +129,18 @@ we have read permissions so open it and finish
 cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 bandit22>23
+examine the  /etc/cron.d
+cat /etc/cron.d/cronjob_bandit23
+script was "/usr/bin/cronjob_bandit23.sh"
+ls -al /usr/bin/cronjob_bandit23.sh
+bandit22 can execute so execute it to see how it works
+and also open and read the code
+see that it make a hashsum of a predictable script
+rewrite the core command change the bandit22 to 23 and get the target file in /tmp dir
+echo I am user bandit23 | md5sum | cut -d ' ' -f -1
+8ca319486bfbbc3663ea0fbe81326349
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+bandit23>24
 
 
