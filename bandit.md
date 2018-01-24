@@ -1,46 +1,73 @@
-bandit0
+### bandit0
+```
 ssh bandit.labs.overthewire.org -p 2220 -l bandit0
+```
 bandit0
-bandit0>1
+### bandit0>1
+```
 cat readme
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
-bandit1>2
+```
+### bandit1>2
+```
 cat ~/-
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
-bandit2>3
+```
+### bandit2>3
+```
 cat spaces\ in\ this\ filename
 UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
-bandit3>4
+```
+### bandit3>4
+```
 cat inhere/.hidden
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB
-bandit4>5
+```
+### bandit4>5
+```
 file inhere/* | grep ASCII
 cat inhere/-file07
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
-bandit5>6
+```
+### bandit5>6
+```
 find ./inhere -size 1033c \! -executable
 cat ./inhere/maybehere07/.file2
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7
-bandit6>7
+```
+### bandit6>7
+```
 find / -size 33c -user bandit7 -group bandit6 2>/dev/null
 cat /var/lib/dpkg/info/bandit7.password
 HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
-bandit7>8
+```
+### bandit7>8
+```
 grep millionth data.txt
 cvX2JJa4CFALtqS87jk27qwqGhBM9plV
-bandit8>9
+```
+### bandit8>9
+```
 sort data.txt | uniq -u
 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
-bandit9>10
+```
+### bandit9>10
+```
 strings data.txt | grep =
 truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
-bandit10>11
+```
+### bandit10>11
+```
 base64 -d data.txt
 IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
-bandit11>12
+```
+### bandit11>12
+```
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
-bandit12>13
+```
+### bandit12>13
+```
 mkdir /tmp/ao3488
 cp data.txt /tmp/ao3488/
 cd /tmp/ao3488
@@ -68,17 +95,25 @@ gunzip data8.gz
 file data8
 cat data8
 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
-bandit13>14
+```
+### bandit13>14
+```
 ls
 ssh localhost -i sshkey.private -l bandit14
-bandit14>15
+```
+### bandit14>15
+```
 cat /etc/bandit_pass/bandit14 | nc 127.0.0.1 30000
 BfMYroe26WYalil77FoDi9qh59eK5xNr
-bandit15>16
+```
+### bandit15>16
 The -ign_eof keeps the connection open to read the response.
+```
 cat /etc/bandit_pass/bandit15 | openssl s_client -connect 127.0.0.1:30001 -ign_eof
 cluFn7wTiGryunymYOu4RcffSxQluehd
-bandit16>17
+```
+### bandit16>17
+```
 nmap -n -Pn -p 31000-32000 127.0.0.1
 nmap -n -Pn -sV -p 31046,31518,31691,31790,31960 127.0.0.1
 cat /etc/bandit_pass/bandit16 | openssl s_client -connect 127.0.0.1:31790 -ign_eof
@@ -86,61 +121,92 @@ mkdir /tmp/ao3489
 cat /etc/bandit_pass/bandit16 | openssl s_client -connect 127.0.0.1:31790 -ign_eof > /tmp/ao3489/ssh_key_bandit17
 edit the file and remain the private key part
 vi /tmp/ao3489/ssh_key_bandit17
+```
 change the permissions of ssh key file
 Keys need to be only accessible by you
+```
 chmod 600 /tmp/ao3489/ssh_key_bandit17
 ssh localhost -i /tmp/ao3489/ssh_key_bandit17 -l bandit17
-bandit17>18
+```
+### bandit17>18
+```
 diff passwords.old passwords.new
 kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
-bandit18>19
+```
+### bandit18>19
+```
 scp -P 2220 bandit18@bandit.labs.overthewire.org:readme .
 cat readme
 IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
-bandit19>bandit20
+```
+### bandit19>bandit20
+```
 ./bandit20-do
 ./bandit20-do whoami
 ./bandit20-do cat /etc/bandit_pass/bandit20
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-bandit20>21
+```
+### bandit20>21
 for docker issue do the port forwarding
 open 1234 on your pc and gorward it to port 22 at bandit localhost
+```
 ssh -l bandit20 -p 2220 -L 1234:localhost:22 bandit.labs.overthewire.org
+```
 after that open two connections from your localhost
+```
 ssh localhost -p 1234 -l bandit20
 ssh localhost -p 1234 -l bandit20
 open nc listener in one of these sessions
 nc -l -p 3333
+```
 start the suid program from another
+```
 ./suconnect 3333
+```
 send the bandit20 pass from listening server (netcat) side
 and get back the bandit21 pass
+```
 gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
-bandit21>22
+```
+### bandit21>22
 examine the /etc/cron.d and see the
+```
 cat /etc/cron.d/cronjob_bandit22
+```
 script was "/usr/bin/cronjob_bandit22.sh"
+```
 ls -al /usr/bin/cronjob_bandit22.sh
+```
 bandit21 can execute so execute it to see the error message
+```
 /usr/bin/cronjob_bandit22.sh
 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv: Permission denied
 ls -al /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+```
 we have read permissions so open it and finish
+```
 cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
-bandit22>23
+```
+### bandit22>23
 examine the  /etc/cron.d
+```
 cat /etc/cron.d/cronjob_bandit23
+```
 script was "/usr/bin/cronjob_bandit23.sh"
+```
 ls -al /usr/bin/cronjob_bandit23.sh
+```
 bandit22 can execute so execute it to see how it works
 and also open and read the code
 see that it make a hashsum of a predictable script
 rewrite the core command change the bandit22 to 23 and get the target file in /tmp dir
+```
 echo I am user bandit23 | md5sum | cut -d ' ' -f -1
 8ca319486bfbbc3663ea0fbe81326349
 cat /tmp/8ca319486bfbbc3663ea0fbe81326349
 jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
-bandit23>24
+```
+### bandit23>24
 
 
