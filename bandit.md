@@ -269,7 +269,7 @@ $ cd /tmp/ao3424
 
 ```
 script content;
-```
+```bash
 #!/bin/bash
 for PIN in {2023..9999}
 do
