@@ -1,15 +1,15 @@
 ### bandit0
-```
+```bash
 $ ssh bandit.labs.overthewire.org -p 2220 -l bandit0
 bandit0
 ```
 ### bandit0>1
-```
+```bash
 $ cat readme
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 ```
 ### bandit1>2
-```
+```bash
 $ cat ~/-
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
 ```
@@ -284,7 +284,7 @@ do
 	if [[ $TEST != *"Wrong"* ]];
 	then
 		echo $TEST
-		echo "gotcha  $PIN" | tee /tmp/ao3424/pass25
+		echo "gotcha  $PIN" | tee /tmp/xx24/pass25
 		break
 	fi
 	echo "$TEST $PIN"
