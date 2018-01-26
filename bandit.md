@@ -1,15 +1,15 @@
 ### bandit0
-```bash
+```
 $ ssh bandit.labs.overthewire.org -p 2220 -l bandit0
 bandit0
 ```
 ### bandit0>1
-```bash
+```
 $ cat readme
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 ```
 ### bandit1>2
-```bash
+```
 $ cat ~/-
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
 ```
@@ -295,5 +295,21 @@ Result after *5540* try
 ```
 I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space. Correct! The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG Exiting.
 ```
-bandit25>26
-
+### bandit25>26
+bandit26 ssh key is present at bandit26 home directory but cannot login bandit26
+check the bandit26 login file
+```
+cat /etc/passwd | grep bandit26
+bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+```
+content of the */usr/bin/showtext*
+```
+cat /usr/bin/showtext
+```
+more command is executed before exiting, more command shows one screenful at a time
+so resize the terminal window in order to not exit from more and then press v to enter vi
+after that use this command in vi
+```
+:e /etc/bandit_pass/bandit26
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+```
