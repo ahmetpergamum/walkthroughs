@@ -133,13 +133,13 @@ Wrong
 A simple script to do a brute force attack to this pincode can work.
 ```bash
 #!/bin/bash
-for PIN in {7000..9999}
+for PIN in {0000..9999}
 do
 	T=$(~/leviathan6 $PIN)
 	if [[ $TEST != *"Wrong"* ]];
 	then
 		echo $TEST
-		echo "gotcha  $PIN" | tee /tmp/ao3506/pass7
+		echo "gotcha  $PIN" | tee /tmp/xx/pass7
 		break
 	fi
 	echo "$TEST $PIN"
