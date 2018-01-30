@@ -131,8 +131,7 @@ $ ./leviathan6 0001
 Wrong
 ```
 A simple script to do a brute force attack to this pincode can work.
-```
-bash
+```bash
 #!/bin/bash
 for PIN in {7000..9999}
 do
