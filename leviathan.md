@@ -124,7 +124,7 @@ $ ./leviathan5
 UgaoFee4li
 ```
 
-# leviathan7
+### leviathan7
 There is a suid program that checks pin code provided by an argumment to the program.
 ```
 $ ./leviathan6 0001
