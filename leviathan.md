@@ -38,6 +38,7 @@ ltrace ./printfile /etc/hostname
 ```
 It checks the access permissions with *access()* function but there is a vulnerability about the `""`
 while calling */bin/cat* program.
+
 Make a file with blank in its name and make a symbolic link with one of its parts
 ```
 mkdir /tmp/xx
