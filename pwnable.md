@@ -1,5 +1,5 @@
 # pwnable.kr walktrough
-(pwnable.kr)[http://pwnable.kr/play.php]
+[pwnable.kr](http://pwnable.kr/play.php)
 ### fd
 
 Connect the server;
