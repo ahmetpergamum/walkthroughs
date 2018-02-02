@@ -30,3 +30,24 @@ drwxr-xr-x  2 root   root 4096 Oct 23  2016 .pwntools-cache
 Anlayze the source code,
 
 ![Image of fd.c ](https://github.com/ahmetpergamum/walkthroughs/blob/master/images/fdc.png)
+
+From the [read function man page](https://linux.die.net/man/3/read);
+
+>The read() function shall attempt to read nbyte (32) bytes from the file associated with the open file descriptor, fd, into the buffer pointed to by buf.
+
+From the [wiki](http://www.wikizero.info/index.php?q=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRmlsZV9kZXNjcmlwdG9y) pages of file desciptor;
+
+>A file descriptor is a non-negative integer, generally represented in the C programming language as the type int (negative values being reserved to indicate "no value" or an error condition).
+
+Provide numbers equal or greater than `4660 (0x1234)` for a valid file descriptor.
+
+Both `4660 and 4661` works fine.
+
+And provide `LETMEWIN` string to pass the `strcmp()` test.
+
+```
+./fd.c 4660
+LETMEWIN
+good job :)
+mommy! I think I know what a file descriptor is!!
+```
